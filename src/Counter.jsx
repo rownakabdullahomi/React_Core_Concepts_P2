@@ -9,7 +9,7 @@ export default function Counter() {
         setCount(count - 1);
     }
     return (
-        <div style={{ border: "2px solid purple", borderRadius: "15px", padding: "15px" }}>
+        <div style={{ border: "2px solid purple", borderRadius: "15px", padding: "15px", margin: "15px"}}>
             <h3>Counter: {count}</h3>
             <button onClick={handleAdd}>Add</button>
             <button onClick={handleReduce}>Reduce</button>
