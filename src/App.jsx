@@ -4,30 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleClick = () => {
+    alert("Button Clicked");
+  }
+  function clickTwo() {
+    alert("Click Btn 2");
+  }
+
+  const addToFive = (num) => { alert(num + 5) }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h3>React Core Concepts</h3>
+      <button onClick={handleClick}>Click Me</button>
+      <button onClick={clickTwo}>Click 2</button>
+      <button onClick={() => { alert("Btn 3 Clicked") }}>Click 3</button>
+      <button onClick={()=>addToFive(4)}>Four + Five</button>
     </>
   )
 }
